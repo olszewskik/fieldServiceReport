@@ -1,9 +1,9 @@
 import React from 'react';
 
-const App = () => (
+const Root = () => (
   <div>
     <h1>Field Service Report</h1>
   </div>
 );
 
-export default App;
+export default Root;
