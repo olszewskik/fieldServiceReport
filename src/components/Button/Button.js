@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
-  background-color: ${({ theme }) => theme.color.black};
-  border: aqua 1px solid;
-`;
+const Button = styled.button``;
 
 export default Button;

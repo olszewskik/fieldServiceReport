@@ -1,19 +1,18 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyle from 'theme/GlobalStyle';
-import Button from 'components/Button/Button';
-import { theme } from 'theme/mainTheme';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Dashboard from 'views/Dashboard';
+import Reports from 'views/Reports';
+import MainTemplate from '../templates/MainTemplate';
 
 const Root = () => (
-  <div>
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <>
-        <h1>Field Service Report</h1>
-        <Button>Hello</Button>
-      </>
-    </ThemeProvider>
-  </div>
+  <BrowserRouter>
+    <MainTemplate>
+      <Switch>
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/reports" component={Reports} />
+      </Switch>
+    </MainTemplate>
+  </BrowserRouter>
 );
 
 export default Root;
