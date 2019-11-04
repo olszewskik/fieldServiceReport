@@ -28,7 +28,7 @@ const DateInfo = styled.div`
 
 const DetailsForDay = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 10px;
   justify-items: center;
   padding-left: 15px;

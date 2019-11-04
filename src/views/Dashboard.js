@@ -1,12 +1,11 @@
 import React from 'react';
-import Menu from 'components/Menu/Menu';
-import Burger from 'components/Burger/Burger';
+import MainHeader from '../components/MainHeader/MainHeader';
+import Box from '../components/Box/Box';
 
 const Dashboard = () => (
   <>
-    <Burger />
-    <Menu />
-    <h1>Dashboard</h1>
+    <MainHeader />
+    <Box />
   </>
 );
 
