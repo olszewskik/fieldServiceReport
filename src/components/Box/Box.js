@@ -1,16 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
+import {renderChildren} from "redux-form/lib/ReduxFormContext";
 
 const StyledWrapper = styled.div`
   background: ${({ theme }) => theme.color.gradientPrimary};
   height: 80px;
-  width: 300px;
+  width: 90vw;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  //justify-content: space-around;
+  justify-content: space-between;
+  align-content: center;
   padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: 15px;
+  box-shadow: 0px 10px 15px -8px rgba(0,0,0,0.75);
 `;
 
 const DateInfo = styled.div`
@@ -49,28 +53,26 @@ const DetailsValue = styled.div`
   color: ${({ theme }) => theme.color.lightGrey};
 `;
 
-const Box = () => (
-  <StyledWrapper>
-    <DateInfo>03/11</DateInfo>
-    <DetailsForDay>
-      <InnerWrappwer>
-        <DetailsHeader>H</DetailsHeader>
-        <DetailsValue>3.25</DetailsValue>
-      </InnerWrappwer>
-      <InnerWrappwer>
-        <DetailsHeader>O</DetailsHeader>
-        <DetailsValue>1</DetailsValue>
-      </InnerWrappwer>
-      <InnerWrappwer>
-        <DetailsHeader>F</DetailsHeader>
-        <DetailsValue>0</DetailsValue>
-      </InnerWrappwer>
-      <InnerWrappwer>
-        <DetailsHeader>P</DetailsHeader>
-        <DetailsValue>2</DetailsValue>
-      </InnerWrappwer>
-    </DetailsForDay>
-  </StyledWrapper>
-);
+const Total = styled.div`
+  color: ${({ theme }) => theme.color.bright};
+  font-weight: 700;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Progress = styled.div`
+
+`;
+
+
+const Box = (props) => (
+      <StyledWrapper>
+        <DateInfo>{props.date}</DateInfo>
+        <Total>3,25 h</Total>
+        <Progress/>
+      </StyledWrapper>
+    );
 
 export default Box;

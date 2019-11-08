@@ -5,9 +5,11 @@ import NavBar from '../NavBar/NavBar';
 const StyledWrapper = styled.div`
   background: ${({ theme }) => theme.color.gradientAdd};
   height: 200px;
-  width: 100vw;
-  border-radius: 0 0 15px 15px;
+  width: 95vw;
+  border-radius: 15px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  box-shadow: 0px 10px 28px 2px rgba(0,0,0,0.4);
 `;
 
 const MainHeader = () => (
