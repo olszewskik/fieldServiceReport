@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 
 class Reports extends Component {
@@ -10,7 +10,7 @@ class Reports extends Component {
     axios
       .get('http://localhost:3000/api/report/reports')
       .then(response => {
-        this.setState({ reports: response.data.reports });
+        this.setState({reports: response.data.reports});
         console.log(response);
       })
       .catch(error => {

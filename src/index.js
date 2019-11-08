@@ -3,7 +3,6 @@ import React from 'react';
 import Root from 'views/Root';
 
 ReactDOM.render(
-  <Root />,
-
+  <Root/>,
   document.getElementById('root'),
 );
