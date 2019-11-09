@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 
-
-const Paragraph = () => (
-  <p></p>
-);
+const Paragraph = styled.p`
+  font-size: ${({ theme }) => theme.fontSize.s};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+`;
 
 export default Paragraph;

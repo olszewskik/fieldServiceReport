@@ -1,47 +1,75 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
-export const StyledBurger = styled.button`
-  position: absolute;
-  top: 5%;
-  left: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+const StyledBurger = styled.button`
+  padding: 10px;
+  display: inline-block;
   background: transparent;
-  border: none;
   cursor: pointer;
-  padding: 0;
-  z-index: 10;
-  span {
-    width: 2rem;
-    height: 0.25rem;
-    background: ${({ theme, open }) => (open ? theme.color.dark : theme.color.bright)};
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-    :first-child {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
-    }
-    :nth-child(2) {
-      opacity: ${({ open }) => (open ? '0' : '1')};
-      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
-    }
-    :nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
-    }
-  }
+  border: 0;
+  margin: 0;
 `;
 
-const Burger = () => (
-  <StyledBurger>
-    <span />
-    <span />
-    <span />
-  </StyledBurger>
-);
+const StyledBurgerBox = styled.span`
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+`;
+
+const StyledBurgerInner = styled.span`
+  width: 100%;
+  height: 3px;
+  background-color: ${({theme, isOpen}) => (isOpen ? 'transparent' : theme.color.dark)};
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color .1s .2s ease-in-out;
+  
+    &::before, ::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: ${({theme}) => (theme.color.dark)};
+    position: absolute;
+    left: 0;
+    transition: transform .2s .2s ease-in-out;
+    }
+    
+    &::before {
+      top: 10px;
+      transform: ${({isOpen}) => (isOpen ? 'translateY(-10px) rotate(-45deg)' : 'translateY(0) rotate(0)')};
+    }
+    
+    &::after {
+      top: -10px;
+      transform: ${({isOpen}) => (isOpen ? 'translateY(10px) rotate(45deg)' : 'translateY(0) rotate(0)')};
+    }
+`;
+
+class Burger extends Component {
+  state = {
+    isOpen: false
+  };
+
+  handleBurgerToggle = () => {
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen
+    }));
+  };
+
+  render() {
+    const {isOpen} = this.state;
+
+    return (
+      <StyledBurger onClick={this.handleBurgerToggle}>
+        <StyledBurgerBox>
+          <StyledBurgerInner isOpen={isOpen}/>
+        </StyledBurgerBox>
+      </StyledBurger>
+    )
+  }
+};
 
 export default Burger;

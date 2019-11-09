@@ -15,7 +15,6 @@ const StyledWrapper = styled.div`
 const Dashboard = () => (
   <>
     <StyledWrapper>
-      <NavBar/>
       <MainHeader/>
       <Box date='06/11'/>
       <Box date='04/11'/>

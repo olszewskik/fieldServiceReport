@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavBar from '../NavBar/NavBar';
+import Paragraph from "../atoms/Paragraph/Paragraph";
 
 const StyledWrapper = styled.div`
   background: ${({ theme }) => theme.color.gradientAdd};
@@ -15,6 +16,9 @@ const StyledWrapper = styled.div`
 const MainHeader = () => (
   <StyledWrapper>
     <NavBar />
+    <Paragraph>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </Paragraph>
   </StyledWrapper>
 );
 

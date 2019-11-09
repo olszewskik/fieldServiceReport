@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Heading from "../atoms/Heading/Heading";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -7,7 +8,8 @@ const StyledWrapper = styled.div`
 
 const NavBar = () => (
   <StyledWrapper>
-    <h1>NavBar</h1>
+    <Heading>Test 1</Heading>
+    <Heading big>Test 2</Heading>
   </StyledWrapper>
 );
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import Input from "../components/atoms/Input/Input";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -18,8 +19,8 @@ class Login extends Component {
     return (
       <StyledWrapper>
         <Form>
-          <input/>
-          <input/>
+          <Input placeholder='Login'/>
+          <Input search/>
           <button>Login</button>
         </Form>
       </StyledWrapper>
