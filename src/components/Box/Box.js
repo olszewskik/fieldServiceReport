@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProgressBar from "../molecules/ProgressBar";
+import Paragraph from "../atoms/Paragraph/Paragraph";
 
 
 const StyledWrapper = styled.div`
@@ -9,11 +10,7 @@ const StyledWrapper = styled.div`
   width: 90vw;
   border-radius: 10px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  align-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-bottom: 15px;
   box-shadow: 0px 10px 15px -8px rgba(0,0,0,0.75);
 `;
@@ -21,14 +18,15 @@ const StyledWrapper = styled.div`
 const StyledDate = styled.div`
   background: ${({theme}) => theme.color.gradientAdd};
   color: ${({theme}) => theme.color.bright};
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
 `;
 
 const Total = styled.div`
@@ -44,8 +42,7 @@ const Box = ({date, time, percentage}) => (
     <StyledDate>{date}</StyledDate>
     <ProgressBar percentage={percentage}/>
     <Total>
-      <h4>Total:</h4>
-      {time}
+      <Paragraph>{time}</Paragraph>
     </Total>
   </StyledWrapper>
 );

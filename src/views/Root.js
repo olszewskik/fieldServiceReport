@@ -7,7 +7,8 @@ import MainTemplate from '../templates/MainTemplate';
 import Login from "./Login";
 import {routes} from "../routes";
 import store from "../store";
-import Burger from "../components/atoms/Burger/Burger";
+import Burger from "../components/atoms/Burger";
+
 
 const Root = () => (
   <Provider store={store}>
