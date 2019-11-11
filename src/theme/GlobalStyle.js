@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+        padding: 0;
+    margin: 0;
   }
   
   html {
@@ -14,8 +16,6 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    padding: 0;
-    margin: 0;
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
   }

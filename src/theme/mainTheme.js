@@ -10,10 +10,11 @@ export const theme = {
     gradientAdd: 'linear-gradient(90deg, rgba(144,128,231), rgba(236,125,174))',
   },
   fontSize: {
-    xs: '1,2rem',
-    s: '1,6rem',
-    m: '2,1rem',
-    l: '4,2rem',
+    xxs: '1rem',
+    xs: '1.2rem',
+    s: '1.6rem',
+    m: '2.1rem',
+    l: '4.2rem',
     xl: '4rem',
   },
   fontWeight: {

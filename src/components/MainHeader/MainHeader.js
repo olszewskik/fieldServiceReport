@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from "../atoms/Burger/Burger";
+import Heading from "../atoms/Heading/Heading";
 
 const StyledWrapper = styled.div`
   background: ${({theme}) => theme.color.gradientAdd};
@@ -10,11 +11,15 @@ const StyledWrapper = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 10px 28px 2px rgba(0,0,0,0.4);
+  color: ${({theme}) => theme.color.bright};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const MainHeader = () => (
   <StyledWrapper>
-    <Burger/>
+    <Heading>H 54.20</Heading>
   </StyledWrapper>
 );
 

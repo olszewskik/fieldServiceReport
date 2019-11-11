@@ -20,7 +20,7 @@ const StyledBurgerBox = styled.span`
 const StyledBurgerInner = styled.span`
   width: 100%;
   height: 3px;
-  background-color: ${({theme, isOpen}) => (isOpen ? 'transparent' : theme.color.dark)};
+  background-color: ${({theme, isOpen}) => (isOpen ? 'transparent' : theme.color.bright)};
   position: absolute;
   left: 0;
   top: 50%;
@@ -31,7 +31,7 @@ const StyledBurgerInner = styled.span`
     content: '';
     width: 100%;
     height: 3px;
-    background-color: ${({theme}) => (theme.color.dark)};
+    background-color: ${({theme}) => (theme.color.bright)};
     position: absolute;
     left: 0;
     transition: transform .2s .2s ease-in-out;
