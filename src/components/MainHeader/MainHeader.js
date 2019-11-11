@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavBar from '../NavBar/NavBar';
-import Paragraph from "../atoms/Paragraph/Paragraph";
+import Burger from "../atoms/Burger/Burger";
 
 const StyledWrapper = styled.div`
-  background: ${({ theme }) => theme.color.gradientAdd};
+  background: ${({theme}) => theme.color.gradientAdd};
   height: 200px;
   width: 95vw;
   border-radius: 15px;
@@ -15,10 +14,7 @@ const StyledWrapper = styled.div`
 
 const MainHeader = () => (
   <StyledWrapper>
-    <NavBar />
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    </Paragraph>
+    <Burger/>
   </StyledWrapper>
 );
 

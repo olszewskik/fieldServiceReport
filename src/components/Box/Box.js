@@ -66,11 +66,10 @@ const Progress = styled.div`
 
 `;
 
-
 const Box = (props) => (
       <StyledWrapper>
         <DateInfo>{props.date}</DateInfo>
-        <Total>3,25 h</Total>
+        <Total>{props.time}</Total>
         <Progress/>
       </StyledWrapper>
     );

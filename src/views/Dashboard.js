@@ -1,8 +1,8 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import MainHeader from '../components/MainHeader/MainHeader';
 import Box from '../components/Box/Box';
 import styled from 'styled-components';
-import NavBar from "../components/NavBar/NavBar";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -12,15 +12,18 @@ const StyledWrapper = styled.div`
   align-items: center;
 `;
 
-const Dashboard = () => (
-  <>
-    <StyledWrapper>
-      <MainHeader/>
-      <Box date='06/11'/>
-      <Box date='04/11'/>
-      <Box date='03/11'/>
-    </StyledWrapper>
-  </>
+const Dashboard = ({dummyData}) => (
+  <StyledWrapper>
+    <MainHeader/>
+    {dummyData.map(({date, time}) => (
+      <Box
+        date={date}
+        time={time}
+      />
+    ))}
+  </StyledWrapper>
 );
 
-export default Dashboard;
+const mapStateToProps = ({dummyData}) => ({dummyData});
+
+export default connect(mapStateToProps)(Dashboard);
