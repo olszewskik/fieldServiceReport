@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyledProgressBar, StyledFiller } from "./ProgressBar.styled";
+import {StyledProgressBar, StyledFiller} from "./ProgressBar.styled";
 
-const ProgressBar = (props) => (
+const ProgressBar = ({percentage}) => (
   <StyledProgressBar>
-    <StyledFiller style={{ width: `${props.percentage}%` }}>{props.percentage}%</StyledFiller>
+    <StyledFiller style={{width: `${percentage}%`}}>{percentage}%</StyledFiller>
   </StyledProgressBar>
 );
 

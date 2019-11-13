@@ -50,7 +50,9 @@ class Box extends Component {
         <ProgressBar percentage={percentage}/>
         <Total>
           <Paragraph>{time}</Paragraph>
+
         </Total>
+
         <Button onClick={() => {
           removeReport(id)
         }}>REMOVE</Button>
