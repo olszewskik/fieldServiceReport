@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import ProgressBar from "../molecules/ProgressBar";
 import Paragraph from "../atoms/Paragraph/Paragraph";
-
+import Button from "../atoms/Button/Button";
+import {connect} from 'react-redux';
+import {removeReport} from 'actions';
 
 const StyledWrapper = styled.div`
   background: ${({theme}) => theme.color.gradientPrimary};
@@ -37,14 +39,29 @@ const Total = styled.div`
   flex-direction: column;
 `;
 
-const Box = ({date, time, percentage}) => (
-  <StyledWrapper>
-    <StyledDate>{date}</StyledDate>
-    <ProgressBar percentage={percentage}/>
-    <Total>
-      <Paragraph>{time}</Paragraph>
-    </Total>
-  </StyledWrapper>
-);
+class Box extends Component {
+  render() {
 
-export default Box;
+    const {id, date, time, percentage, removeReport} = this.props;
+
+    return (
+      <StyledWrapper>
+        <StyledDate>{date}</StyledDate>
+        <ProgressBar percentage={percentage}/>
+        <Total>
+          <Paragraph>{time}</Paragraph>
+        </Total>
+        <Button onClick={() => {
+          removeReport(id)
+        }}>REMOVE</Button>
+      </StyledWrapper>
+    )
+  }
+};
+
+
+const mapDispatchToProps = dispatch => ({
+  removeReport: (id) => dispatch(removeReport(id)),
+});
+
+export default connect(null, mapDispatchToProps)(Box);

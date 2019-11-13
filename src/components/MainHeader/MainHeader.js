@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Burger from "../atoms/Burger/Burger";
 import Heading from "../atoms/Heading/Heading";
 
 const StyledWrapper = styled.div`

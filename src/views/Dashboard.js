@@ -16,12 +16,13 @@ const StyledWrapper = styled.div`
 const Dashboard = ({dummyData}) => (
   <StyledWrapper>
     <MainHeader/>
-    {dummyData.map(({date, time, percentage}) => (
+    {dummyData.map(({id, date, time, percentage}) => (
       <Box
+        id={id}
         date={date}
         time={time}
         percentage={percentage}
-        key={date}
+        key={id}
       />
     ))}
   </StyledWrapper>
@@ -29,6 +30,7 @@ const Dashboard = ({dummyData}) => (
 
 Box.propTypes = {
   dummyData: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
     date: PropTypes.string.isRequired,
     time: PropTypes.string.isRequired,
     percentage: PropTypes.number.isRequired
