@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import MainHeader from '../components/MainHeader/MainHeader';
-import Box from '../components/Box/Box';
+import ActivityCard from '../components/ActivityCard/ActivityCard';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
@@ -17,7 +17,7 @@ const Dashboard = ({dummyData}) => (
   <StyledWrapper>
     <MainHeader/>
     {dummyData.map(({id, date, time, percentage}) => (
-      <Box
+      <ActivityCard
         id={id}
         date={date}
         time={time}
@@ -28,7 +28,7 @@ const Dashboard = ({dummyData}) => (
   </StyledWrapper>
 );
 
-Box.propTypes = {
+ActivityCard.propTypes = {
   dummyData: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     date: PropTypes.string.isRequired,

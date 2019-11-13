@@ -4,7 +4,7 @@ const initialState = {
       id: 1,
       date: '01/11',
       time: '3,5',
-      percentage: 20
+      percentage: 18
     },
     {
       id: 2,

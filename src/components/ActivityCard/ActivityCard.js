@@ -39,7 +39,7 @@ const Total = styled.div`
   flex-direction: column;
 `;
 
-class Box extends Component {
+class ActivityCard extends Component {
   render() {
 
     const {id, date, time, percentage, removeReport} = this.props;
@@ -66,4 +66,4 @@ const mapDispatchToProps = dispatch => ({
   removeReport: (id) => dispatch(removeReport(id)),
 });
 
-export default connect(null, mapDispatchToProps)(Box);
+export default connect(null, mapDispatchToProps)(ActivityCard);
