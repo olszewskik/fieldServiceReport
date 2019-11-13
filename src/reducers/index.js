@@ -23,7 +23,38 @@ const initialState = {
       date: '04/11',
       time: '3,1',
       percentage: 50
+    },
+    {
+      id: 5,
+      date: '04/11',
+      time: '3,1',
+      percentage: 50
+    },
+    {
+      id: 6,
+      date: '04/11',
+      time: '3,1',
+      percentage: 50
+    },
+    {
+      id: 7,
+      date: '04/11',
+      time: '3,1',
+      percentage: 50
+    },
+    {
+      id: 8,
+      date: '04/11',
+      time: '3,1',
+      percentage: 50
+    },
+    {
+      id: 9,
+      date: '04/11',
+      time: '3,1',
+      percentage: 50
     }
+
   ]
 };
 

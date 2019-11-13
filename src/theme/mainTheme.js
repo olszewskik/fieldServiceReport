@@ -14,8 +14,8 @@ export const theme = {
     xs: '1.2rem',
     s: '1.6rem',
     m: '2.1rem',
-    l: '4.2rem',
-    xl: '4rem',
+    l: '2.5rem',
+    xl: '3rem',
   },
   fontWeight: {
     regular: '300',

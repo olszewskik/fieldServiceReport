@@ -1,29 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from "react-router-dom";
-import {routes} from "routes";
-import Heading from "../../atoms/Heading/Heading";
 
 const StyledMenu = styled.nav`
+position: fixed;
+  bottom: 0;
+  padding: 25px 0;
+  width: 100vw;
+  background-color: aliceblue;
   display: flex;
-  flex-direction: column;
-  background: ${({ theme }) => theme.color.lightGrey};
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-  height: 100vh;
-  text-align: left;
-  padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease-in-out;
-  }
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const StyledLinksList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
 `;
 
 const Menu = () => (
   <StyledMenu>
-    <Heading>Menu</Heading>
-    <Link to={routes.home}>Home</Link>
-    <Link to={routes.reports}>Reports</Link>
+    <StyledLinksList>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+      <li>E</li>
+    </StyledLinksList>
   </StyledMenu>
 );
 

@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import MainHeader from '../components/MainHeader/MainHeader';
 import ActivityCard from '../components/ActivityCard/ActivityCard';
 import styled from 'styled-components';
+import Menu from "../components/organisms/Menu/Menu";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -25,6 +26,7 @@ const Dashboard = ({dummyData}) => (
         key={id}
       />
     ))}
+    <Menu/>
   </StyledWrapper>
 );
 
