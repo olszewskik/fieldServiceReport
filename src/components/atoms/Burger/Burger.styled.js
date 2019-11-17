@@ -6,7 +6,6 @@ export const StyledBurger = styled.button`
   background: transparent;
   cursor: pointer;
   border: 0;
-  margin: 10px;
   position: fixed;
 `;
 
@@ -20,7 +19,8 @@ export const StyledBurgerBox = styled.span`
 export const StyledBurgerInner = styled.span`
   width: 100%;
   height: 3px;
-  background-color: ${({theme, isOpen}) => (isOpen ? 'transparent' : theme.color.bright)};
+  background-color: ${({theme, isOpen}) => (isOpen ? 'transparent' : theme.color.black)};
+  opacity: 0.8;
   position: absolute;
   left: 0;
   top: 50%;
@@ -31,7 +31,8 @@ export const StyledBurgerInner = styled.span`
     content: '';
     width: 100%;
     height: 3px;
-    background-color: ${({theme}) => (theme.color.bright)};
+    background-color: ${({theme}) => (theme.color.black)};
+    opacity: 0.8;
     position: absolute;
     left: 0;
     transition: transform .2s .2s ease-in-out;

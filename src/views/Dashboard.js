@@ -5,29 +5,32 @@ import ActivityCard from '../components/ActivityCard/ActivityCard';
 import styled from 'styled-components';
 import ActivityThisMonth from "../components/ActivityThisMonth/ActivityThisMonth";
 import UserTemplate from "../templates/UserTemplate";
+import ButtonIcon from "../components/atoms/ButtonIcon/ButtonIcon";
+import addIcon from '../assets/icons/plus-solid.svg'
+import MainHeader from "../components/MainHeader/MainHeader";
 
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column; 
   align-items: center;
   width: 100vw;
-  background-color: ${({theme}) => theme.color.dark};
+`;
+
+const StyledAddIcon = styled(ButtonIcon)`
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: darkorange;
 `;
 
 
-const Dashboard = ({dummyData}) => (
+const Dashboard = () => (
   <UserTemplate>
     <StyledWrapper>
+      <MainHeader/>
       <ActivityThisMonth/>
-      {dummyData.map(({id, date, time, percentage}) => (
-        <ActivityCard
-          id={id}
-          date={date}
-          time={time}
-          percentage={percentage}
-          key={id}
-        />
-      ))}
+
+      <StyledAddIcon icon={addIcon} />
     </StyledWrapper>
   </UserTemplate>
 );
