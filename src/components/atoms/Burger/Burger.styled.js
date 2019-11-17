@@ -6,7 +6,8 @@ export const StyledBurger = styled.button`
   background: transparent;
   cursor: pointer;
   border: 0;
-  margin: 0;
+  margin: 10px;
+  position: fixed;
 `;
 
 export const StyledBurgerBox = styled.span`

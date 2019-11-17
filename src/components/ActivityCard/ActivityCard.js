@@ -9,7 +9,7 @@ import {removeReport} from 'actions';
 const StyledWrapper = styled.div`
   background: ${({theme}) => theme.color.gradientPrimary};
   height: 80px;
-  width: 90vw;
+  width: 100vw;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;

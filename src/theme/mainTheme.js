@@ -6,6 +6,7 @@ export const theme = {
     lightGrey: 'hsl(228, 21%, 63%)',
     bright: 'hsl(210, 12%, 90%)',
     light: 'hsl(0, 0%, 93%)',
+    white: 'hsl(0, 0%, 100%)',
     violet: 'hsl(305, 49%, 66%)',
     green: 'hsl(78, 61%, 47%)',
     gradientPrimary: 'linear-gradient(90deg, rgb(85,95,127), rgb(52,61,91))',

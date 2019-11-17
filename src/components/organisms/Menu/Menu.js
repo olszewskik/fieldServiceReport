@@ -6,44 +6,41 @@ import calendarIcon from '../../../assets/icons/calendar-alt-regular.svg';
 import chartIcon from '../../../assets/icons/chart-line-solid.svg';
 import settingIcon from '../../../assets/icons/cog-solid.svg';
 import plusIcon from '../../../assets/icons/plus-solid.svg';
+import {Link} from "react-router-dom";
 
 const StyledMenu = styled.nav`
-position: fixed;
-  bottom: 0;
-  padding: 10px 10px 20px 10px; 
-  width: 100vw;
-  height: 80px;
-  background-color: ${({theme}) => theme.color.light};
+  position: fixed;
+  top: 0;
+  left: ${({ isOpen }) => (isOpen ? '0' : '-60px')};
+  height: 100vh;
+  width: 60px;
+  background-color: ${({theme}) => theme.color.white};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
 `;
 
 const StyledLinksList = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
 `;
 
-const AddButtonIcon = styled(ButtonIcon)`
-  background-color: ${({theme}) => theme.color.green};
-  border-radius: 100%;
-  position: relative;
-  bottom: 20px;
-  transform: scale(1.8);
-  border: 6px solid ${({theme}) => theme.color.light};
-`;
-
-const Menu = () => (
-  <StyledMenu>
+const Menu = ({isOpen}) => (
+  <StyledMenu isOpen={isOpen}>
     <StyledLinksList>
       <li>
         <ButtonIcon icon={calendarIcon}/>
       </li>
       <li>
-        <ButtonIcon icon={chartIcon}/>
+        <Link to={'/reports'}>
+          <ButtonIcon icon={chartIcon}/>
+        </Link>
       </li>
       <li>
-        <AddButtonIcon icon={plusIcon}/>
+        <ButtonIcon icon={plusIcon}/>
       </li>
       <li>
         <ButtonIcon icon={clockIcon}/>
@@ -54,5 +51,6 @@ const Menu = () => (
     </StyledLinksList>
   </StyledMenu>
 );
+
 
 export default Menu;

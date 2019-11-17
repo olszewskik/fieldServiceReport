@@ -6,7 +6,6 @@ import Paragraph from "../atoms/Paragraph/Paragraph";
 const StyledWrapper = styled.div`
   background: ${({theme}) => theme.color.light};
   min-height: 80px;
-  width: 100vw;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
